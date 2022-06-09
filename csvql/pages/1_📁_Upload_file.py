@@ -51,8 +51,8 @@ with st.container():
                       st.success(createStatus.get('Message'))
                       #time.sleep(10)
                       st.session_state.upload_key = str(randint(1000, 100000000))
-                      time.sleep(10)
                       db.close()
+                      time.sleep(3)
                       st.experimental_rerun() 
                  else:
                       st.error(createStatus.get('Message'))

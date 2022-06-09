@@ -25,7 +25,7 @@ _,run_col,download_col = st.columns([6,1,1])
 with run_col:
     if st.button("Execute"):
         db = CSVdb()
-        if query == 'Query ...':
+        if query is None:
             st.warn("Enter Query")
         else:
             st.session_state.data = db.runQuery(query)
